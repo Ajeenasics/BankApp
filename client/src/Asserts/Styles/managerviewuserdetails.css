@@ -1,0 +1,43 @@
+#usedetailsprofilepic{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+.userdetailsview {
+    color: rgba(191, 93, 255, 1);
+}
+#fullbody{
+    border: 2px solid rgba(128, 128, 128, 0.445);
+    /* margin: 2%; */
+    border-radius: 22px;
+    
+}
+/* #cardfullbody{
+    margin: 50px;
+    align-items: center;
+} */
+/* #personalDetails{
+    padding-bottom: 50px;
+} */
+.cardlabels{
+    font-size: small;
+    color: grey;
+    font-weight: 600;
+}
+.carddetails{
+    font-weight: bold;
+}
+.cardtitle{
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-size:large;
+}
+.cardlinks{
+    color: rgba(191, 93, 255, 1);
+}
+/* .eachcard{
+    margin-top: 25px;
+    margin-left: 100px;
+} */

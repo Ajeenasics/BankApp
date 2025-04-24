@@ -1,0 +1,199 @@
+.MML-MainDiv {
+
+    background-color: #F5F2F7;
+    min-height: 100vh;
+
+}
+
+.MML-MainDiv-ContainDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+
+
+}
+
+.MML-MainDiv-ContainDiv-ContentDiv {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+
+}
+
+.MML-MainDiv-ContainDiv-HeaderDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 60px;
+    margin-left: 27px;
+
+}
+
+.MML-h1 {
+
+    color: #A112FF;
+    font-weight: 600 !important;
+
+
+}
+
+.MML-h2 {
+
+    font-weight: 600 !important;
+
+}
+
+.MML-Button1 {
+
+    height: 40px;
+    width: 230px;
+    border: none;
+    border-radius: 31px;
+    background-color: #BF5DFF;
+    color: white;
+
+}
+
+.MML-Button2 {
+
+    height: 40px;
+    width: 230px;
+    border: 2px solid #BF5DFF;
+    border-radius: 31px;
+    background-color: #00000000;
+    color: #BF5DFF;
+
+}
+
+.MML-MainDiv-ContainDiv-ButtonDiv {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+
+}
+
+.MML-MainDiv-ContainDiv-Content {
+
+    margin-top: 30px;
+    overflow-x: auto;
+    padding-right: 60px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+}
+
+.MML-Button3 {
+
+    background: none;
+    border: none;
+    max-height: 10px;
+    max-width: 25px;
+    padding: 0px;
+    max-height: min-content;
+    border-radius: 60%;
+
+}
+
+.MML-img {
+
+    height: 41px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.MML-Table-Contain-Shadow {
+
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.MML-Table-Contain-Shadow:hover {
+    box-shadow: 0px 1px 10px 6px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.MML-Table {
+
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+
+.MML-Table-thead-tr {
+
+    background-color: #BF5DFF;
+    height: 40px;
+
+}
+
+.MML-Table-thead-th-center {
+
+    text-align: center;
+
+}
+
+.MML-Table-tbody-tr {
+
+    height: 60px;
+
+}
+
+.MML-Table-tbody-tr:nth-child(odd) {
+
+    background-color: white;
+
+}
+
+.MML-Table-tbody-tr:nth-child(even) {
+
+    background-color: #FCF6FF;
+
+}
+
+
+.MML-Table-td {
+
+    text-align: left;
+
+}
+
+.MML-Table-td-center {
+
+    text-align: center;
+
+}
+
+.MML-Table-p {
+
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+}
+
+.MML-Table-p-2 {
+
+    font-size: 13px;
+    font-weight: 400;
+    color: #00000080;
+    margin-top: 0px;
+
+}

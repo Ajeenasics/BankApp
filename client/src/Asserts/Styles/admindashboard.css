@@ -1,0 +1,200 @@
+.sidebardesign{
+    background-color: black;
+    min-height: 100vh;
+    height: max-content;
+    color: aliceblue;
+    position: fixed;
+    width: 23%;
+}
+.dashboardheadcolor{
+    color: #9747ff;
+}
+#common{
+    background-color: #FFF5FDCC;
+    min-height: 100vh;
+    padding-bottom: 5%;
+}
+
+
+.img {
+    border-radius: 35px;
+    padding: 10px;
+}
+
+#card1 {
+
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#card2 {
+
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+hr {
+    color: blueviolet;
+}
+
+#details {
+    color: blueviolet;
+}
+
+.sc {
+ 
+ 
+    color: blueviolet;
+}
+#positioningbtn{
+    position: absolute;
+    bottom: 5%;
+    left:26%
+}
+.horisontal{
+    color:#A112FF;
+    width: 90%;
+}
+.profiletop{
+    width: 100%;
+}
+.profileimhg{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 40%;
+    margin-top: -130px;
+}
+.editprofileimhg{
+    width: 250px;
+    height: 250px;
+}
+.managermainbtn{
+    background-color: #000000;
+}
+.managerbtn{
+    background-color: #000000;
+}
+
+.clerkprofileimg{
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+}
+.clerkidproofimg{
+    width: 100%;
+    height: 500px;
+    
+}
+
+
+/* piechart */
+/* .managerDashboardfullbody{
+    background-color: rgba(128, 128, 128, 0.082);
+} */
+.managerDashboardpiechart {
+    background-color:white;
+    /* margin-left: 50px;
+    margin-right: 25px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+.managerDashboardpiechart1{
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+
+}
+
+ .managerDashboardTableHead {
+    background-color: rgba(191, 93, 255, 1);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+
+} 
+#managerDashBoardTable{
+    position: relative;
+    top: 25px;
+    /* left: 150px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px; 
+    
+
+}
+.managerDashboardTableData{
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.managerDashboardsubline {
+    color: grey;
+    font-weight: 400;
+    font-size: medium;
+}
+
+.managerDashboardrowclr {
+    background-color: rgba(190, 93, 255, 0.041);
+}
+
+#managerDashboardeyeicon {
+    color: rgba(191, 93, 255, 1);
+    font-size: larger;
+}
+
+.managerDashboardviewuser{
+    padding-top: 35px;
+    /* padding-left: 50px; */
+}
+.managerdashboard{
+    padding-top: 25px;
+    padding-bottom: 25px;    
+}
+#managerDashboardclerkcolor{
+    color: rgba(191, 93, 255, 1);
+}
+.managerDashboardTableDataviewDetails{
+    color: rgba(191, 93, 255, 1);
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+    font-size: large;
+}
+.managerDashboardpiechartdetails{
+    padding-left: 50px;
+}
+#managerDashboardLoanButton{
+    margin-top: 10px;
+    color: rgba(191, 93, 255, 1);
+    background-color: white;
+    border-color: rgba(191, 93, 255, 1);
+}
+#managerDashboardLoanButton:hover{
+    margin-top: 10px;
+    background-color: rgba(191, 93, 255, 1);
+    color: white;
+    border-color: rgba(191, 93, 255, 1);
+}
+#managerDashboardclerkLifeinduranceButton{
+    margin-top: 10px;
+    color: rgba(191, 93, 255, 1);
+    background-color: white;
+    border-color: rgba(191, 93, 255, 1);
+}
+.managerDashboardpiechartimg{
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+}
+#managerDashboardViewwallLink{
+    color: rgba(191, 93, 255, 1);
+}
+.hover:hover{
+    border-color: rgba(191, 93, 255, 1);
+
+}

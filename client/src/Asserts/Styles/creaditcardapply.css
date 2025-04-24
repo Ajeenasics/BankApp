@@ -1,0 +1,143 @@
+.CACC-MainDiv {
+    background-color: #f5f2f7;
+    background-size: 100%;
+    min-height: 100vh;
+}
+
+.CACC-p {
+    color: #bf5dff;
+    margin-top: 10px;
+}
+
+.CACC-p-link {
+    color: #bf5dff;
+    text-decoration: 2px solid underline;
+    margin-top: 10px;
+}
+.CACC-p-link:hover {
+    cursor: pointer;
+}
+
+.custcreditstatussect2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custcreditstatussect2pt2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #f5f2f7;
+    border: 2px solid #cac8cc;
+    border-radius: 20px;
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 60px;
+    padding-right: 20px;
+    max-width: max-content;
+    min-width: max-content;
+}
+
+.custcreditstatussect3pt3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 550;
+    background-color: #f5f2f7;
+    border: none;
+    margin-left: 255px;
+    margin-right: 255px;
+    margin-top: 20px;
+
+}
+
+#custcreditapplyimg {
+    padding-left: 450px;
+    height: 300px;
+    position: absolute;
+    top: 30px;
+}
+
+.custcreditstatussect1pt1col1 {
+    padding-left: 30px;
+    font-weight: bold;
+
+}
+
+.custcreditstatussect1pt1col2 {
+    padding-left: 150px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+#custcreditstatussect2h3,
+#custcreditstatussect3h3 {
+    color: #9a00ff;
+    font-weight: bold;
+}
+
+#custcreditstatusapplybtn1 {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 30px;
+    background-color: #bf5dff;
+    color: white;
+    border: none;
+}
+
+#custcreditstatusapplybtn2 {
+    font-size: 18px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 30px;
+    background-color: #bf5dff;
+    color: white;
+    border: none;
+}
+
+.custcreditstatusradiobtn {
+    background-color: #e5c3fb;
+    border-radius: 10px;
+    color: #d18ffd;
+}
+
+.custcreditstatussect2formth,
+.custcreditstatussect2formthonerow,
+.custcreditstatussect2formtd {
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.custcreditstatussect2datalabel {
+    font-size: 15px;
+    font-weight: 1px;
+    color: #6e6e6e;
+}
+
+.custcreditstatussect2data {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#custcreditstatussect1pt1col1p1 {
+    font-size: 15px;
+}
+
+#custcreditstatussect1pt1col1p2 {
+    font-size: 25px;
+}
+
+.custcreditstatussect2formthonerow {
+    -ms-grid-row-span: 2;
+}
+
+#custcreditstatussect2formthlabel1 {
+    color: #bf5dff;
+}
+
+#custcreditstatussect2formthlabel2 {
+    color: #bf5dff;
+    text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+.CCACD-MainDiv {
+
+    background-color: #F5F2F7;
+    min-height: 100vh;
+
+}
+
+.CCACD-progress-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #9a00ff;
+    text-align: center;
+    width: 100px;
+}
+
+.CCACD-cardtype {
+
+    display:flex;
+    flex-direction:row;
+    height:47px;
+
+
+}
+
+.CCACD-cardtype-radio {
+
+    margin-left:15px;
+    margin-right:5px;
+
+}
+
+.CCACD-cardtype-label {
+
+    margin-top:10px;
+
+}
+
+.CCACD-CustLoanEmplDetailsformcontrol {
+    width: 100%;
+    height:47px;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+
+}

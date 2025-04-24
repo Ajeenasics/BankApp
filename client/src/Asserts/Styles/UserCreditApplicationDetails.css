@@ -1,0 +1,391 @@
+
+.UCAD-MainDiv {
+
+    background-color: #F5F2F7;
+    min-height: 100vh;
+
+}
+
+.UCAD-MainDiv-ContainDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 22%;
+    padding-top: 60px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-ContentDiv {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.UCAD-MainDiv-ContainDiv-HeaderDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 2px;
+    justify-content:center;
+
+}
+
+.UCAD-h1 {
+
+    color: #A112FF;
+    font-weight: 600 !important;
+
+
+}
+
+.UCAD-h2 {
+
+    font-weight: 600 !important;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content {
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 2px;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom:40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin-left: 50%;
+    transform: translate(-50%);
+
+}
+
+.UCAD-profile-img {
+
+    height: 131px;
+    width: 131px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.466);
+    transition: box-shadow 0.3s ease;
+
+}
+
+.UCAD-profile-img:hover {
+    box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.466);
+    transition: box-shadow 0.3s ease;
+}
+
+.UCAD-h3 {
+
+    color: rgba(191, 93, 255, 1);
+    font-size: 28px;
+    font-weight: bold !important;
+    margin-top: 10px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Upper {
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Lower {
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 474px;
+    max-width: 474px;
+    white-space: wrap;
+    word-wrap: break-word;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Contain {
+
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: start;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Left {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left:20px;
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Left-Details {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Right {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.UCAD-label {
+
+    font-size: 16px !important;
+    color: rgba(110, 110, 110, 1);
+
+}
+
+.UCAD-h4 {
+
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 237px;
+    min-width: none;
+    overflow-wrap: anywhere;
+
+}
+
+.UCAD-h5 {
+
+    font-size: 18px;
+    color: rgba(191, 93, 255, 1);
+    text-align: left !important;
+    font-weight: bold;
+    margin-left:20px;
+    margin-top:20px;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Button {
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.UCAD-button1 {
+
+    background-color: white;
+    color: rgba(191, 93, 255, 1);
+    border: 1px solid rgba(191, 93, 255, 1);
+    padding: 5px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+.UCAD-button2 {
+
+    background-color: rgba(191, 93, 255, 1);
+    color: white;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.UCAD-txt-contain {
+
+    max-width: 237px;
+    min-width: none;
+    white-space: wrap;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+
+}
+.UCAD-h4 {
+
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 237px;
+    min-width: none;
+    overflow-wrap: anywhere;
+
+}
+
+.UCAD-h5 {
+
+    font-size: 18px;
+    color: rgba(191, 93, 255, 1);
+    text-align: left !important;
+    font-weight: bold;
+
+}
+
+.UCAD-MainDiv-ContainDiv-Content-Card-Button {
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.UCAD-button1 {
+
+    background-color: white;
+    color: rgba(191, 93, 255, 1);
+    border: 1px solid rgba(191, 93, 255, 1);
+    padding: 5px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.UCAD-button2 {
+
+    background-color: rgba(191, 93, 255, 1);
+    color: white;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.UCAD-textcontain {
+
+    max-width: 237px;
+    min-width: none;
+    white-space: wrap;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+
+}
+
+.circlecontainerdiv {
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+
+}
+
+.UCADcirclecontainer {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    margin-right:0px;
+    gap: 0px;
+}
+
+.UCADcircle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color:rgb(178, 175, 180);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.UCADcircle.active {
+    background-color: #bf5dff;
+    color: white;
+}
+
+.UCADcirclecontainer-1 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-right:-2px;
+}
+
+.UCADcirclecontainer-2 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-left:-21px;
+    margin-right:-21px;
+}
+
+.UCADcirclecontainer-3 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-left:-46px;
+    margin-right:-46px;
+    
+}
+
+.UCADcirclecontainer-4 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-left:-40px;
+    
+}
+
+.UCAD-profildetaildline {
+    height: 3px;
+    background-color: rgb(178, 175, 180);
+    position: relative;
+    top: -15px;
+    width: 230px;
+    margin:0px;
+}
+
+.UCAD-profildetaildline.active {
+    height: 3px;
+    background-color: #bf5dff;
+    position: relative;
+    top: -15px;
+    width: 230px;
+    margin:0px;
+}
+
+.UCAD-progress-text {
+    margin:0px !important;
+    padding:0px !important;
+    margin-top: 10px !important;
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    min-width: max-content;
+}

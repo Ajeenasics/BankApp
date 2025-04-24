@@ -1,0 +1,111 @@
+.CCCA {
+    display:flex;
+    flex-direction:column;
+    background-color: #F5F2F7;
+    background-size:100%;
+    /* height:100%; */
+    min-height: 100vh;
+}
+
+/* loan apply user detaaails */
+/* .CCCA {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+  } */
+
+.CCCAhorizontal-card {
+    border-radius: 20px !important;
+    overflow: hidden;
+    background-color: #f5f2f7;
+}
+
+.CCCAcirclecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    margin-right:0px;
+    gap: 0px;
+}
+
+.CCCAcircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e4d9ec;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.CCCAcircle.active {
+    background-color: #bf5dff;
+    color: white;
+}
+
+.CCCA-profildetaildline {
+    height: 3px;
+    background-color: #e4d9ec;
+    position: relative;
+    top: -15px;
+    width: 100%;
+    margin:0px;
+}
+
+.CCCAcirclecontainer-1 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    margin-right:-20px;
+}
+
+.CCCAcirclecontainer-2 {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin:30px;
+    margin-left:-20px;
+}
+
+.CCCAStepText {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.CCCAformcontrol {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.CCCAformcontrol[type="file"]::file-selector-button {
+    -webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
+    border: none;
+    position:absolute;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #00000000;
+    color: #00000000;
+    
+}
+
+#CCCAButton {
+    background-color: #bf5dff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+}

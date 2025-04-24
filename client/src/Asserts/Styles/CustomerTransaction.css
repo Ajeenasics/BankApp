@@ -1,0 +1,19 @@
+.onlinetransaction{
+    background-color:#F5F2F7;
+    min-height: 100vh ;
+}
+.online-bill{
+    color: #bf5dff;
+}
+.file-upload{
+    display: none;
+}
+.ifce-input{
+    margin-right:35%;
+}
+.paynow-btn{
+    background-color:#bf5dff !important ;
+    color: white !important;
+    width: 150px;
+    height: 40px;
+}

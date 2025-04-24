@@ -1,0 +1,164 @@
+.billtype-payment{
+    background-color:#F5F2F7;
+    min-height: 100vh ;
+} 
+ 
+
+  
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    position: relative;
+  }
+  
+.tab-button.active {
+    color: #bf5dff;
+  }
+  
+.tab-button.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #bf5dff;
+    border-radius: 2px;
+  }
+  
+  
+.carddata {
+    border: 1px solid #e5e5e5;
+    background-color: #F5F2F7 !important;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+ 
+  
+.btn-purple {
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.btn-purple:hover {
+    background-color: #5c2bbf;
+  }
+.unlimited{
+    background-color: white !important;
+  }
+
+
+
+h4.text-purple {
+  color: #9d07ff; 
+  font-weight: bold;
+}
+.plan-card{
+  border: 1px solid #e5e5e5;
+    background-color: white !important;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.pay-now-container {
+  padding: 40px;
+  background-color: #F5F2F7;
+  text-align: center;
+}
+
+.pay-now-card {
+  max-width: 400px;
+  border: none;
+  background:white !important;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pay-now-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7e57c2;
+}
+
+.pay-now-card .card-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .plan-card {
+    margin-bottom: 15px;
+  }
+
+  .pay-now-container {
+    padding: 20px;
+  }
+}
+
+.search{
+  border-radius: 50px;
+  border-color: #dcdcdc;
+}
+
+.search-group{
+  max-width: 300px;
+}
+.search-align{
+  margin-left: 450px ;
+}
+
+.paynow-button{
+  background-color:#bf5dff !important ;
+  color: white !important;
+  width: 100px;
+  height: 40px;
+}
+
+/* billpayments water electric */
+
+.bill-number input{
+  width:30vw;
+  margin-left: 400px;
+}
+.bill-number label{
+
+  margin-right:400px;
+}
+.paynow-btn{
+  background-color:#bf5dff !important ;
+  color: white !important;
+  width: 150px;
+  height: 40px;
+}
+
+.water-bill{
+  color: #bf5dff;
+}
+
+.electricity-bill{
+  color: #bf5dff;
+}
+.electricity-paybutton{
+  background-color:#bf5dff !important ;
+  color: white !important;
+  width: 150px;
+  height: 40px;
+}
+.electricity-number input{
+  width:30vw;
+  margin-left: 400px;
+}
+.electricity-number label{
+
+  margin-right:400px;
+}

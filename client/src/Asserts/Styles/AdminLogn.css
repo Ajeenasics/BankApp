@@ -1,0 +1,51 @@
+.loginbackground {
+  padding: 5%;
+  background-color: #f5f2f7;
+  align-items: center;
+}
+
+.a {
+  background-color: #ebe9ec;
+  margin-top: 100px;
+  padding: 4%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.image {
+  text-align: center;
+}
+
+.main {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#inputusername {
+  background-color: white;
+  border-color: #ebe9ec;
+  border-radius: 0.5rem;
+}
+
+#inputpassword {
+  background-color: white;
+  border-color: #ebe9ec;
+  border-radius: 0.5rem;
+}
+
+#inputusername::placeholder {
+  color: gray;
+}
+
+.adminlogineye{
+  position: relative;
+  bottom:35px;
+  left:90%
+}
+.managersavebtn{
+    background-color: #BF5DFF;
+border: none;
+padding: 2% 15%;
+border-radius: 15px;
+
+}
+.s{
+  color: #d5b1ec;
+}

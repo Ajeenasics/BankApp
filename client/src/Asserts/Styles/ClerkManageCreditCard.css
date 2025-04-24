@@ -1,0 +1,199 @@
+.CMCC-MainDiv {
+
+    background-color: #F5F2F7;
+    min-height: 100vh;
+
+}
+
+.CMCC-MainDiv-ContainDiv {
+
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+
+
+}
+
+.CMCC-MainDiv-ContainDiv-ContentDiv {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    
+}
+
+.CMCC-MainDiv-ContainDiv-HeaderDiv {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 60px;
+    
+}
+
+.CMCC-h1 {
+    
+    margin-left: 10%;
+    color: #A112FF;
+    font-weight: 600 !important;
+
+
+}
+
+.CMCC-h2 {
+
+    font-weight: 600 !important;
+
+}
+
+.CMCC-Button1 {
+
+    height: 40px;
+    width: 230px;
+    border: none;
+    border-radius: 31px;
+    background-color: #BF5DFF;
+    color: white;
+
+}
+
+.CMCC-Button2 {
+
+    height: 40px;
+    width: 230px;
+    border: 2px solid #BF5DFF;
+    border-radius: 31px;
+    background-color: #00000000;
+    color: #BF5DFF;
+
+}
+
+.CMCC-MainDiv-ContainDiv-ButtonDiv {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+
+}
+
+.CMCC-MainDiv-ContainDiv-Content {
+
+    margin-top: 30px;
+    overflow-x: auto;
+    padding-right: 60px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+}
+
+.CMCC-Button3 {
+
+    background: none;
+    border: none;
+    max-height: 10px;
+    max-width: 25px;
+    padding: 0px;
+    max-height: min-content;
+    border-radius: 60%;
+
+}
+
+.CMCC-img {
+
+    height: 41px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.CMCC-Table-Contain-Shadow {
+
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.CMCC-Table-Contain-Shadow:hover {
+    box-shadow: 0px 1px 10px 6px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.CMCC-Table {
+
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+
+.CMCC-Table-thead-tr {
+
+    background-color: #BF5DFF;
+    height: 40px;
+
+}
+
+.CMCC-Table-thead-th-center {
+
+    text-align: center;
+
+}
+
+.CMCC-Table-tbody-tr {
+
+    height: 60px;
+
+}
+
+.CMCC-Table-tbody-tr:nth-child(odd) {
+
+    background-color: white;
+
+}
+
+.CMCC-Table-tbody-tr:nth-child(even) {
+
+    background-color: #FCF6FF;
+
+}
+
+
+.CMCC-Table-td {
+
+    text-align: left;
+
+}
+
+.CMCC-Table-td-center {
+
+    text-align: center;
+
+}
+
+.CMCC-Table-p {
+
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+}
+
+.CMCC-Table-p-2 {
+
+    font-size: 13px;
+    font-weight: 400;
+    color: #00000080;
+    margin-top: 0px;
+
+}
