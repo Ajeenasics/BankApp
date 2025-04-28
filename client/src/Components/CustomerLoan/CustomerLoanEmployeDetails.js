@@ -28,8 +28,44 @@ function CustomerLoanEmployeDetails() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prevForm) => ({ ...prevForm, [name]: value }));
+    let newValue = value;
+    let error = "";
+  
+    // Validation rules
+    if (name === "nameofemployer" || name === "position") {
+      // Allow only letters, numbers and spaces
+      newValue = newValue.replace(/[^a-zA-Z0-9 ]/g, '');
+      if (!newValue.trim()) {
+        error = "This field is required.";
+      }
+    } else if (name === "employercontact") {
+      // Allow only numbers, exactly 10 digits
+      newValue = newValue.replace(/[^0-9]/g, '');
+      if (newValue.length > 10) {
+        newValue = newValue.slice(0, 10); // restrict to 10 digits
+      }
+      if (newValue.length !== 10) {
+        error = "Employer contact must be exactly 10 digits.";
+      }
+    } else if (name === "workexp" || name === "salary") {
+      // Allow only numbers
+      newValue = newValue.replace(/[^0-9]/g, '');
+      if (name === "workexp" && (Number(newValue) <= 0 || !newValue)) {
+        error = "Work experience must be greater than 0.";
+      }
+      if (name === "salary" && (Number(newValue) <= 10000 || !newValue)) {
+        error = "Salary must be greater than 10000.";
+      }
+    }
+  
+    setForm((prevForm) => ({ ...prevForm, [name]: newValue }));
+  
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: error,
+    }));
   };
+  
   const UserbackButton = () => {
     if (window.location.pathname === "/bank_app/user/homepage") {
       navigate("/user/homepage");

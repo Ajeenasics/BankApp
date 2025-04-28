@@ -14,6 +14,9 @@ function ManagerManageCreditCard() {
     const [vDbData, setVDbData] = useState([])
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
+    const [filteredUsers, setFilteredUsers] = useState([]);
+    const rowsPerPage = 10;
+    const [currentPage, setCurrentPage] = useState(1);
 
     const ApplicationData = async () => {
         try {
@@ -24,7 +27,7 @@ function ManagerManageCreditCard() {
             setDbData([]);  // Prevents undefined state
         }
     };
-    
+
 
     // const VerifiedApplicationData = async () => {
 
@@ -38,7 +41,15 @@ function ManagerManageCreditCard() {
     //     }
 
     // }
+    // Pagination logic
+    const indexOfLastRow = currentPage * rowsPerPage;
+    const indexOfFirstRow = indexOfLastRow - rowsPerPage;
+    const currentRows = filteredUsers.slice(indexOfFirstRow, indexOfLastRow);
+    const totalPages = Math.ceil(filteredUsers.length / rowsPerPage);
 
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
     const VerifiedApplicationData = async () => {
         try {
             const response = await axiosInstance.post('/approvedcreditapplication');
@@ -90,7 +101,7 @@ function ManagerManageCreditCard() {
                         <h1 className='MML-h1'>MANAGE </h1>
                         <h1 className='MML-h2'>CREDIT CARD</h1>
                     </div>
-                    
+
                     <div className='MML-MainDiv-ContainDiv-ButtonDiv'>
 
                         <button className={buttonState == false ? 'MML-Button1' : 'MML-Button2'} id='appbutton' onClick={ApplicationState}>Application</button>
@@ -101,16 +112,16 @@ function ManagerManageCreditCard() {
                     <div className='MML-MainDiv-ContainDiv-Content'>
 
                         <div className='row'>
-                        <div className='col-8'><h3 className='MML-h3'>View Request</h3></div>
+                            <div className='col-8'><h3 className='MML-h3'>View Request</h3></div>
                             <div className='col-3'> <div className='MML-SearchDiv'>
-                            <input 
-                                type='text' 
-                                placeholder='Search by name...' 
-                                className='form-control MML-SearchInput' 
-                                value={searchQuery} 
-                                onChange={(e) => setSearchQuery(e.target.value)} 
-                            />
-                        </div></div>
+                                <input
+                                    type='text'
+                                    placeholder='Search by name...'
+                                    className='form-control MML-SearchInput'
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                            </div></div>
                         </div>
                         <div className='MML-Table-Contain-Shadow'>
                             <table className='MML-Table'>
@@ -220,6 +231,45 @@ function ManagerManageCreditCard() {
 
                             </table>
                         </div>
+                        <nav aria-label="Page navigation example" className="mt-3">
+          <ul className="pagination justify-content-center">
+            <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+              <button
+                className="page-link"
+                onClick={() => handlePageChange(currentPage - 1)}
+              >
+                &laquo;
+              </button>
+            </li>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <li
+                className={`page-item ${
+                  currentPage === i + 1 ? "active" : ""
+                }`}
+                key={i}
+              >
+                <button
+                  className="page-link"
+                  onClick={() => handlePageChange(i + 1)}
+                >
+                  {i + 1}
+                </button>
+              </li>
+            ))}
+            <li
+              className={`page-item ${
+                currentPage === totalPages ? "disabled" : ""
+              }`}
+            >
+              <button
+                className="page-link"
+                onClick={() => handlePageChange(currentPage + 1)}
+              >
+                &raquo;
+              </button>
+            </li>
+          </ul>
+        </nav>
                     </div>
 
                 </div>

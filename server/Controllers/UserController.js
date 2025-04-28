@@ -17,8 +17,9 @@ const transporter = nodemailer.createTransport({
 });
 
 const testMail = (data) => {
+  console.log(data.userMail);
   
-  let email = data.email;
+  let email = data.userMail;
   const mailOptions = {
     from: "supprot.web.application@gmail.com",
     to: email,
@@ -334,9 +335,9 @@ const deActivateUserById = (req, res) => {
 
 const forgotPWDsentMail = async (req, res) => {
  console.log(req.body,"pp");
- 
+ const {email}=req.body
   try {
-    const data = await User.find({userMail:req.body.email})
+    const data = await User.findOne({userMail:email})
     console.log(data.userMail ,"data");
 
     if(data.userMail) {
@@ -365,7 +366,7 @@ const forgotPWDsentMail = async (req, res) => {
 };
 
 const resetPassword = async (req, res) => {
-  await Clerk.findByIdAndUpdate(
+  await User.findByIdAndUpdate(
     { _id: req.params.id },
     {
       password: req.body.password,

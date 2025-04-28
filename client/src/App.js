@@ -82,6 +82,7 @@ import AdminViewAllApprovedLoan from "./Components/Admin/AdminViewAllApprovedLoa
 import AdminViewALoanDetails from "./Components/Admin/AdminViewALoanDetails";
 import UserTermsAndCondition from "./UserTermsAndCondition";
 import AboutPage from "./Components/Main/AboutPage";
+import ClerkForgot from "./Components/User/ClerkForgot";
 
 function App() {
   return (
@@ -122,7 +123,7 @@ function App() {
         <Route path="/reset-password/:id" element={<UserForgotmailAccept />} />
 
         <Route path="/clerk/login" element={<ClerkLogin />} />
-        <Route path="/clerk/forgot" element={<UserSentForgotpswd />} />
+        <Route path="/clerk/forgot" element={<ClerkForgot />} />
         <Route path="/clerk/reset-password/:id" element={<UserForgotmailAccept />} />
         <Route path="/manager/profile" element={<ManagerProfile />} />
         <Route path="/manager/editprofile" element={<ManagerEditProfile />} />

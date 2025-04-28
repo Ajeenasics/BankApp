@@ -3,8 +3,7 @@ import "../../Asserts/Styles/CustomerBillPayment.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import axiosInstance from "../../apis/axiosinstance";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 
 function CustomerMobileRecharge() {
@@ -13,18 +12,18 @@ function CustomerMobileRecharge() {
   const [rechargePlans, setRechargePlans] = useState([]);
   const [operators, setOperators] = useState([]);
   const [numberdata, setNumberdata] = useState("");
-  const [isChecked,setIsChecked]=useState()
+  const [isChecked, setIsChecked] = useState(false);
   const [error, setError] = useState("");
   const userid = localStorage.getItem("userid");
   const navigate = useNavigate();
 
-  // Validation for mobile number
   const validateMobileNumber = (value) => {
     if (!value || value.length !== 10 || isNaN(value)) {
       return "Mobile number must be exactly 10 numeric digits.";
     }
     return "";
   };
+
   const UserbackButton = () => {
     if (window.location.pathname === "/bank_app/user/homepage") {
       navigate("/user/homepage");
@@ -32,7 +31,7 @@ function CustomerMobileRecharge() {
       navigate(-1);
     }
   };
-  // Fetch recharge plans
+
   const fetchMobileRechargePlans = () => {
     axiosInstance
       .post("/mobilerechargeplanview")
@@ -40,7 +39,6 @@ function CustomerMobileRecharge() {
         const plans = response.data.data;
         setRechargePlans(plans);
 
-        // Extract unique operators
         const uniqueOperators = [
           ...new Set(plans.map((plan) => plan.operator)),
         ];
@@ -66,6 +64,11 @@ function CustomerMobileRecharge() {
   };
 
   const handlePlanSelect = (plan) => {
+    const validationError = validateMobileNumber(numberdata);
+    if (!numberdata || validationError || !selectedOperator) {
+      alert("Please enter a valid 10-digit mobile number and select an operator before choosing a plan.");
+      return;
+    }
     setSelectedPlan(plan);
   };
 
@@ -89,6 +92,7 @@ function CustomerMobileRecharge() {
     axiosInstance
       .post("/mobileRechargePayment", paymentData)
       .then((response) => {
+        window.location.reload()
         alert(response.data.msg);
         navigate("/user/billpayment");
       })
@@ -96,7 +100,7 @@ function CustomerMobileRecharge() {
         console.error("Error during payment:", error);
         alert(
           error.response?.data?.msg ||
-            "Failed to process payment. Please try again."
+          "Failed to process payment. Please try again."
         );
       });
   };
@@ -169,6 +173,7 @@ function CustomerMobileRecharge() {
                       <div
                         className="unlimited card-footer d-flex justify-content-between mt-4 text-muted"
                         onClick={() => handlePlanSelect(plan)}
+                        style={{ cursor: "pointer" }}
                       >
                         {plan.operator}
                         <div className="text-dark">
@@ -208,18 +213,18 @@ function CustomerMobileRecharge() {
                 Amount Payable: ₹{selectedPlan.planamount}/-
               </div>
               <p>
-              <input
-                type="checkbox"
-                checked={isChecked}
-                onChange={(e) => setIsChecked(e.target.checked)}
-              ></input>{" "}
-              &nbsp;I have read and agree to the Terms and Conditions of
-              Unicredit, including the payment policies and dispute resolution
-              terms.
-              <Link to="/user/termsandcondition" target="_blank">
-                terms & conditions.
-              </Link>{" "}
-            </p>
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={(e) => setIsChecked(e.target.checked)}
+                />{" "}
+                &nbsp;I have read and agree to the Terms and Conditions of
+                Unicredit, including the payment policies and dispute resolution
+                terms.
+                <Link to="/user/termsandcondition" target="_blank">
+                  terms & conditions.
+                </Link>{" "}
+              </p>
               <button
                 className="btn paynow-button mt-3 rounded-pill"
                 onClick={handlePayment}

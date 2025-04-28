@@ -1,7 +1,9 @@
 const Clerk = require("../Models/ClerksSchema");
-
+const nodemailer = require("nodemailer");
+const config = require("../configuration");
 const multer = require("multer");
 const jwt = require("jsonwebtoken");
+const { logRequestMiddleware } = require("./CreditCardController");
 const secret = "Clerk";
 
 // Multer storage configuration
@@ -13,6 +15,34 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "supprot.web.application@gmail.com",
+    pass: "ukyw olqq kuql jnty",
+  },
+});
+
+const testMail = (data) => {
+  console.log(data.email,"texymai");
+  let email = data.email;
+  const mailOptions = {
+    from: "supprot.web.application@gmail.com",
+    to: email,
+    subject: "Reset Password From Unicredit bank Application",
+    text: `Dear ${data.name},${"\n"}please check this link : ${
+      config.serverUrl ||  config.localUrl
+    }${data._id} to reset your password`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log("Error:", error);
+    } else {
+    }
+  });
+};
 
 const upload = multer({ storage: storage }).array("files");
 
@@ -304,6 +334,67 @@ const deActivateClerkById = (req, res) => {
     });
 };
 
+const forgotPWDsentMail = async (req, res) => {
+  console.log(req.body,"pp");
+  const { email } = req.body;
+  try {
+    const data = await Clerk.find({ email: email });
+    console.log("data",data[0].email)
+    if (data && data[0].email) {
+      const id = data[0]._id.toString();
+      console.log(id ,"data");
+
+      testMail(data[0]);
+
+      res.status(200).json({
+        status: 200,
+        msg: "A password reset link has been sent to your Email. Please check.",
+      });
+    } else {
+      res.status(404).json({
+        status: 404,
+        msg: "Enter your Registered MailId",
+      });
+    }
+  } catch (err) {
+    console.error("Error in forgotPWDsentMail:", err);
+    res.status(500).json({
+      status: 500,
+      msg: "Server Error",
+      Error: err,
+    });
+  }
+};
+
+const resetPassword = async (req, res) => {
+  await Clerk.findByIdAndUpdate(
+    { _id: req.params.id },
+    {
+      password: req.body.password,
+    }
+  )
+    .exec()
+    .then((data) => {
+      if (data != null)
+        res.json({
+          status: 200,
+          msg: "Password Updated successfully",
+        });
+      else
+        res.json({
+          status: 500,
+          msg: "User Not Found",
+        });
+    })
+    .catch((err) => {
+      res.json({
+        status: 500,
+        msg: "Data not Updated",
+        Error: err,
+      });
+    });
+};
+
 module.exports = {
   upload,loginClerk,
   AddClerk,
@@ -312,5 +403,6 @@ module.exports = {
   editClerkById,
   activateClerkById,
   deActivateClerkById,
-  specUp
+  specUp,
+  forgotPWDsentMail,resetPassword
 };

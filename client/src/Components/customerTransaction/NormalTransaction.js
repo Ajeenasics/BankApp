@@ -343,7 +343,7 @@ function NormalTransaction() {
             </p>
             <div className="text-center">
               <button type="submit" disabled={!isChecked} className="btn paynow-btn rounded-pill mt-4">
-                Pay now ₹{formData.payamount || 0}/-
+                Pay now 
               </button>
             </div>
           </form>
