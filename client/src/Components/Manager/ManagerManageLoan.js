@@ -13,12 +13,16 @@ function ManagerManageLoan() {
     const [buttonState, setButtonState] = useState(false)
     const [vDbData, setVDbData] = useState([])
     const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+    const [filteredUsers, setFilteredUsers] = useState([]);
+  
+  const rowsPerPage = 10;
 
     const ApplicationData = async () => {
         try {
             const response = await axiosInstance.get('/nonapprovedloan');
             console.log("user list", response.data);
-    
+
             // Filter for loanapproval status as "Pending"
             const filteredData = response.data.data.filter(item => item.loanapproval === "Pending");
             setDbData(filteredData);
@@ -26,19 +30,29 @@ function ManagerManageLoan() {
             console.error('Error fetching user data:', error);
         }
     };
-    
+
+    // Pagination logic
+  const indexOfLastRow = currentPage * rowsPerPage;
+  const indexOfFirstRow = indexOfLastRow - rowsPerPage;
+  const currentRows = filteredUsers.slice(indexOfFirstRow, indexOfLastRow);
+  const totalPages = Math.ceil(filteredUsers.length / rowsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
     const VerifiedApplicationData = async () => {
         try {
             const response = await axiosInstance.get('/approvedloan');
             console.log("user list", response.data);
-    
-           
+
+
             setVDbData(response.data.data);
         } catch (error) {
             console.error('Error fetching user data:', error);
         }
     };
-    
+
 
     // for button css and switching the table
     const ApplicationState = () => {
@@ -115,13 +129,13 @@ function ManagerManageLoan() {
 
                                 <tbody className='MML-Table-tbody'>
 
-                                    {verified == false  ? (
+                                    {verified == false ? (
                                         DbData?.length > 0 ? (
 
                                             DbData?.map((data, index) => {
 
                                                 return (
-                                
+
                                                     <tr className='MML-Table-tbody-tr' key={index}>
 
                                                         <td className='MML-Table-td-center'>{index + 1}.</td>
@@ -200,7 +214,43 @@ function ManagerManageLoan() {
                             </table>
                         </div>
                     </div>
-
+                    <nav aria-label="Page navigation example" className="mt-3">
+                        <ul className="pagination justify-content-center">
+                            <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                                <button
+                                    className="page-link"
+                                    onClick={() => handlePageChange(currentPage - 1)}
+                                >
+                                    &laquo;
+                                </button>
+                            </li>
+                            {Array.from({ length: totalPages }, (_, i) => (
+                                <li
+                                    className={`page-item ${currentPage === i + 1 ? "active" : ""
+                                        }`}
+                                    key={i}
+                                >
+                                    <button
+                                        className="page-link"
+                                        onClick={() => handlePageChange(i + 1)}
+                                    >
+                                        {i + 1}
+                                    </button>
+                                </li>
+                            ))}
+                            <li
+                                className={`page-item ${currentPage === totalPages ? "disabled" : ""
+                                    }`}
+                            >
+                                <button
+                                    className="page-link"
+                                    onClick={() => handlePageChange(currentPage + 1)}
+                                >
+                                    &raquo;
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>

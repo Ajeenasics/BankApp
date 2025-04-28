@@ -73,7 +73,6 @@ function CustomerCreditApplyCardDetails() {
             newErrors.salary = "Your salary must be greater than 10000.";
             isValid = false;
           }
-                if (!form.creditcardlimit.trim()) newErrors.creditcardlimit = "Enter your credit card limit.";
         if (!form.idproof) newErrors.idproof = "ID Proof is required.";
         if (!form.incomeproof) newErrors.incomeproof = "Income proof is required.";
 

@@ -99,11 +99,8 @@ function AdminLogin() {
                 type="email"
                 className="form-control form-input"
                 id="inputusername"
-                placeholder="Email"
-                required=""
                 onChange={handleInputChange}
                 name="email"
-                value={data.email}
               />
               {errors.email && (
                 <div className="text-danger">{errors.email}</div>
@@ -115,11 +112,8 @@ function AdminLogin() {
               type={showPassword ? "text" : "password"}
               className="form-control form-input"
                 id="textbox"
-                placeholder="Password"
-                required=""
                 name="password"
                 onChange={handleInputChange}
-                value={data.password}
               />
               <div className="adminlogineye" onClick={togglePasswordVisibility}>
               {showPassword ? <FiEyeOff /> : <FaEye/>}

@@ -32,6 +32,8 @@ router.get('/view_a_user/:userid', user.viewUserById);
 router.post('/edit_a_user/:userid', user.upload, user.editUserById);
 router.get('/viewusers', user.viewUsers);
 
+router.post('/clerkforgotPWDsentMail', clerk.forgotPWDsentMail);
+router.post('/clerkresetPassword/:id', clerk.resetPassword);
 
 router.post('/deactivate_a_user/:id', user.deActivateUserById)
 router.post('/activate_a_user/:id', user.activateUserById)

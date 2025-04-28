@@ -321,7 +321,7 @@ function CustomerOnlineTransaction() {
                 type="submit"
                 className="btn paynow-btn rounded-pill mt-4"
               >
-                Pay now ₹{formData.payamount || 0}/-
+                Pay now
               </button>
             </div>
           </form>
